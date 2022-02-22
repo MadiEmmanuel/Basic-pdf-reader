@@ -26,15 +26,15 @@ Extract text from PDF files
     ${matches}=     Variable Should Exist   ${text}         ${invoice_one}      #Evaluate variable appears in pdf extract
     OperatingSystem.Create Directory      ${CURDIR}/../process_flow/Client_Africa       #Create a directort where extracted file will be save at
     OperatingSystem.Move File   ${CURDIR}/../process_flow/Invoice-DHB.pdf       ${CURDIR}/../process_flow/Client_Africa   #Move file to a desired directory
-    ${moved_files}=     Count Items in Directory    ${CURDIR}/../process_flow/Client_Africa         #Count files in the directory
+    ${moved_files}=     Count Items In Directory    ${CURDIR}/../process_flow/Client_Africa         #Count files in the directory
     Set Variable    'Moved'${moved_files} 'number of files'
     
-    
+
     ${text2}=        Get Text From PDF       ${file2}
     ${matches}=     Variable Should Exist   ${text2}         ${invoice_two}
     OperatingSystem.Create Directory      ${CURDIR}/../process_flow/Xaclty_Client 
     OperatingSystem.Move File   ${CURDIR}/../process_flow/Xaclty_Invoice.pdf      ${CURDIR}/../process_flow/Xaclty_Client
-    ${moved_files}=     Count Items in Directory    ${CURDIR}/../process_flow/Xaclty_Client
+    ${moved_files}=     Count Items In Directory    ${CURDIR}/../process_flow/Xaclty_Client
     Set Variable    'Moved'${moved_files} 'number of files'      
     
 
