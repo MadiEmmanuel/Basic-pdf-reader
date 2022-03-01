@@ -34,7 +34,7 @@ Extract text from PDF files
     ${matches}=     Variable Should Exist   ${text2}         ${invoice_two}
     OperatingSystem.Create Directory      ${CURDIR}/../process_flow/Xaclty_Client 
     OperatingSystem.Move File   ${CURDIR}/../process_flow/Xaclty_Invoice.pdf      ${CURDIR}/../process_flow/Xaclty_Client
-    ${moved_files}=     Count Items In Directory    ${CURDIR}/../process_flow/Xaclty_Client
+    ${moved_files}=     Count Itemsn Directory    ${CURDIR}/../process_flow/Xaclty_Client
     Set Variable    'Moved'${moved_files} 'number of files'      
     
 
